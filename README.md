@@ -7,7 +7,7 @@
 ## 📌 Visão Geral
 Este projeto é uma prova de conceito (PoC) desenvolvida para atender aos requisitos de uma vaga de **Cientista de Dados Sênior**, focada em **Alta Performance, Setor Financeiro Regulado e IA Generativa**. Ele simula um agente autônomo que conversa com dados massivos, treina modelos (Sklearn/PyTorch), documenta resultados e garante explicabilidade (SHAP) - tudo orquestrado com MLOps (MLflow).
 
-## 🧠 Stack Tecnológico (Alinhado 100% com a Vaga)
+## 🧠 Stack Tecnológico
 - **Manipulação de Dados:** `Pandas`, `NumPy`, `SQLAlchemy`
 - **Machine Learning:** `Scikit-learn`, `PyTorch`
 - **GenAI & NLP:** `LangChain` + `Azure OpenAI (GPT-4)`
