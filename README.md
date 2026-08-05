@@ -17,7 +17,55 @@ Este projeto é uma prova de conceito (PoC) desenvolvida para atender aos requis
 - **Explicabilidade:** `SHAP` (essencial para regulação)
 - **Cloud Ready:** Projetado para `Azure` e `Databricks` (via MLflow)
 
-## 📈 Resultados Obtidos
+📄 Veja o [relatório completo de performance](reports/model_performance.md) para mais detalhes.
+
+### ⚙️ Executando o projeto
+
+```bash
+# Ative o ambiente virtual
+source venv/Scripts/activate  # Windows: venv\Scripts\activate
+
+# Execute o projeto (com suporte ao MLflow)
+export MLFLOW_ALLOW_FILE_STORE=true
+python main.py
+
+## Estrutura
+
+├── config/                    # Configurações centralizadas
+├── src/                       # Código fonte modular
+│   ├── data_loader.py         # Carregamento de dados (real ou sintético)
+│   ├── feature_engineering.py # Preparação automática de features
+│   ├── model_trainer.py       # Treino com Sklearn + PyTorch + MLflow
+│   ├── explainability.py      # SHAP para explicabilidade
+│   ├── agent.py               # Agente GenAI com DeepSeek
+│   └── utils.py               # Funções auxiliares
+├── notebooks/                 # Análises exploratórias (futuras)
+├── tests/                     # Testes unitários (futuros)
+├── reports/                   # 📊 RELATÓRIOS GERADOS
+│   └── model_performance.md   # Relatório de performance do modelo
+├── data/                      # Datasets
+│   └── raw/                   # Dados brutos (ignorados pelo Git)
+├── main.py                    # Orquestrador principal
+├── requirements.txt           # Dependências do projeto
+├── setup.py                   # Configuração do pacote
+├── .env.example               # Exemplo de variáveis de ambiente
+├── .gitignore                 # Arquivos ignorados pelo Git
+├── LICENSE                    # Licença MIT
+├── README.md                  # Este arquivo
+└── historico_perguntas.csv    # 💬 Histórico de conversas com o agente
+
+## Artefatos
+
+O projeto gera automaticamente os seguintes artefatos durante a execução:
+
+| Arquivo | Descrição |
+| :--- | :--- |
+| `reports/model_performance.md` | Relatório detalhado com métricas (AUC, Recall, Feature Importance) |
+| `historico_perguntas.csv` | Histórico completo das perguntas feitas ao agente e suas respostas |
+| `shap_summary.png` | Gráfico de importância das features (SHAP) para explicabilidade |
+| `mlruns/` | Experimentos e modelos versionados pelo MLflow |
+
+### 📈 Resultados Obtidos
 
 O projeto foi testado com um dataset real de 10.000 transações financeiras, alcançando os seguintes resultados:
 
@@ -32,21 +80,5 @@ O projeto foi testado com um dataset real de 10.000 transações financeiras, al
 - **Horário da transação** é o maior preditor de fraude (transações entre 0h-6h são altamente suspeitas).
 - **Dispositivos com baixa confiança** (trust score < 40) aumentam o risco em 6x.
 - O modelo captura **98% das fraudes**, com apenas 15% de falsos positivos.
+> 💡 **Dica:** O relatório de performance mostra que o modelo atingiu **AUC 0.9993** e **Recall de 98%** para detecção de fraudes.
 
-📄 Veja o [relatório completo de performance](reports/model_performance.md) para mais detalhes.
-
-## ⚙️ Como Executar
-
-1. **Clone o repositório:**
-```bash
-git clone https://github.com/Diego-Math1/jump-insight-genai.git
-cd jump-insight-genai
-
-📌 Estrutura do projeto
-├── config/            # Configurações centralizadas
-├── src/               # Código fonte modular (Data, Features, Models, Agent)
-├── notebooks/         # Análises exploratórias
-├── tests/             # Testes unitários
-├── data/              # Datasets (raw/processado)
-├── main.py            # Orquestrador principal
-└── README.md          # Este arquivo
