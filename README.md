@@ -9,15 +9,21 @@
 ## 📌 Visão Geral
 Este projeto é uma prova de conceito desenvolvida focada em **Alta Performance no Setor Financeiro Regulado e IA Generativa**. Ele simula um agente autônomo que conversa com dados massivos, treina modelos (Sklearn/PyTorch), documenta resultados e garante explicabilidade (SHAP) - tudo orquestrado com MLOps (MLflow).
 
-## 🧠 Stack Tecnológico 
-- **Manipulação de Dados:** `Pandas`, `NumPy`, `SQLAlchemy`
-- **Machine Learning:** `Scikit-learn`, `PyTorch`
-- **GenAI & NLP:** `LangChain` + `Azure OpenAI (GPT-4)`
-- **MLOps & Deploy:** `MLflow` (tracking e registro de modelos)
-- **Explicabilidade:** `SHAP` (essencial para regulação)
-- **Cloud Ready:** Projetado para `Azure` e `Databricks` (via MLflow)
+## 🧠 Stack Tecnológico
 
-📄 Veja o [relatório completo de performance](reports/model_performance.md) para mais detalhes.
+| Área | Tecnologias |
+| :--- | :--- |
+| **📊 Manipulação de Dados** | `Pandas` · `NumPy` · `SQLAlchemy` |
+| **🤖 Machine Learning** | `Scikit-learn` · `PyTorch` |
+| **🧠 GenAI & NLP** | `LangChain` + [`DeepSeek V4`](https://deepseek.com) (via `langchain-deepseek`) |
+| **📦 MLOps & Deploy** | `MLflow` (tracking, versionamento e registro de modelos) |
+| **🔍 Explicabilidade** | `SHAP` (essencial para modelos em setores regulados) |
+| **☁️ Cloud Ready** | Projetado para `Azure` e `Databricks` (com MLflow) |
+
+[![DeepSeek](https://img.shields.io/badge/LLM-DeepSeek_V4-4D6BFE?logo=deepseek&logoColor=white)](https://deepseek.com)
+[![MLflow](https://img.shields.io/badge/MLflow-2.9+-orange)](https://mlflow.org)
+[![SHAP](https://img.shields.io/badge/Explainability-SHAP-ff69b4)](https://shap.readthedocs.io/)
+
 
 ### ⚙️ Executando o projeto
 
@@ -75,6 +81,8 @@ O projeto foi testado com um dataset real de 10.000 transações financeiras, al
 | **Recall (Fraude)** | **98%** |
 | **Precisão (Fraude)** | 85% |
 | **Feature Mais Importante** | `transaction_hour` (27% de importância) |
+
+📄 Veja o [relatório completo de performance](reports/model_performance.md) para mais detalhes.
 
 ### 🔍 Principais Insights
 - **Horário da transação** é o maior preditor de fraude (transações entre 0h-6h são altamente suspeitas).
