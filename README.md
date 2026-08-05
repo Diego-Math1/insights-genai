@@ -7,7 +7,7 @@
 [![DeepSeek API](https://img.shields.io/badge/DeepSeek-API-4D6BFE?logo=deepseek&logoColor=white)](https://platform.deepseek.com/)
 
 ## 📌 Visão Geral
-Este projeto é uma prova de conceito (PoC) desenvolvida para atender aos requisitos de uma vaga de **Cientista de Dados Sênior**, focada em **Alta Performance, Setor Financeiro Regulado e IA Generativa**. Ele simula um agente autônomo que conversa com dados massivos, treina modelos (Sklearn/PyTorch), documenta resultados e garante explicabilidade (SHAP) - tudo orquestrado com MLOps (MLflow).
+Este projeto é uma prova de conceito desenvolvida focada em **Alta Performance no Setor Financeiro Regulado e IA Generativa**. Ele simula um agente autônomo que conversa com dados massivos, treina modelos (Sklearn/PyTorch), documenta resultados e garante explicabilidade (SHAP) - tudo orquestrado com MLOps (MLflow).
 
 ## 🧠 Stack Tecnológico 
 - **Manipulação de Dados:** `Pandas`, `NumPy`, `SQLAlchemy`
