@@ -7,13 +7,31 @@
 ## 📌 Visão Geral
 Este projeto é uma prova de conceito (PoC) desenvolvida para atender aos requisitos de uma vaga de **Cientista de Dados Sênior**, focada em **Alta Performance, Setor Financeiro Regulado e IA Generativa**. Ele simula um agente autônomo que conversa com dados massivos, treina modelos (Sklearn/PyTorch), documenta resultados e garante explicabilidade (SHAP) - tudo orquestrado com MLOps (MLflow).
 
-## 🧠 Stack Tecnológico (Alinhado 100% com a Vaga)
+## 🧠 Stack Tecnológico 
 - **Manipulação de Dados:** `Pandas`, `NumPy`, `SQLAlchemy`
 - **Machine Learning:** `Scikit-learn`, `PyTorch`
 - **GenAI & NLP:** `LangChain` + `Azure OpenAI (GPT-4)`
 - **MLOps & Deploy:** `MLflow` (tracking e registro de modelos)
 - **Explicabilidade:** `SHAP` (essencial para regulação)
 - **Cloud Ready:** Projetado para `Azure` e `Databricks` (via MLflow)
+
+## 📈 Resultados Obtidos
+
+O projeto foi testado com um dataset real de 10.000 transações financeiras, alcançando os seguintes resultados:
+
+| Métrica | Valor |
+| :--- | :--- |
+| **ROC-AUC** | **0.9993** |
+| **Recall (Fraude)** | **98%** |
+| **Precisão (Fraude)** | 85% |
+| **Feature Mais Importante** | `transaction_hour` (27% de importância) |
+
+### 🔍 Principais Insights
+- **Horário da transação** é o maior preditor de fraude (transações entre 0h-6h são altamente suspeitas).
+- **Dispositivos com baixa confiança** (trust score < 40) aumentam o risco em 6x.
+- O modelo captura **98% das fraudes**, com apenas 15% de falsos positivos.
+
+📄 Veja o [relatório completo de performance](reports/model_performance.md) para mais detalhes.
 
 ## ⚙️ Como Executar
 
