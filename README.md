@@ -90,3 +90,10 @@ O projeto foi testado com um dataset real de 10.000 transações financeiras, al
 - O modelo captura **98% das fraudes**, com apenas 15% de falsos positivos.
 > 💡 **Dica:** O relatório de performance mostra que o modelo atingiu **AUC 0.9993** e **Recall de 98%** para detecção de fraudes.
 
+🧰 Skills Utilizadas
+Técnicas:
+Python · Pandas · NumPy · Scikit-learn · PyTorch · LangChain · DeepSeek V4 · MLflow · SHAP · MLOps · Git/GitHub
+
+Comportamentais:
+Visão Analítica · Orientação a Resultados · Autonomia · Comunicação Clara · Atualização Constante
+
